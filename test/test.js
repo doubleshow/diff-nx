@@ -5,6 +5,13 @@ function create_test_network_list() {
     var list = mock.create()
     list.add()
         .year(2014)
+        .month(1)
+        .developer('adam')
+        .developer('ben')
+        .relationship('adam', 'ben')
+
+    list.add()
+        .year(2014)
         .month(2)
         .developer('adam')
         .developer('ben')
@@ -20,8 +27,23 @@ function create_test_network_list() {
         .developer('dave')
         .developer('mario')
         .relationship('adam', 'ben')
-        .relationship('ben', 'cindy')
-        .relationship('dave', 'cindy')
+        .relationship('ben', 'mario')
+        .relationship('dave', 'mario')
+
+
+    list.add()
+        .year(2014)
+        .month(4)
+        .developer('adam')
+        .developer('ben')
+        .developer('caleb')
+        .developer('dave')
+        .developer('eva')
+        .developer('mario')
+        .relationship('eva', 'caleb')
+        .relationship('adam', 'ben')
+        .relationship('ben', 'mario')
+        .relationship('dave', 'mario')
 
     return list;
 }
